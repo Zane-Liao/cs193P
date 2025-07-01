@@ -9,13 +9,13 @@ class EmojiMemoryGame: ObservableObject {
     typealias Card = MemoryGame<String>.Card
     
     private static let themes: [Theme] = [
-        Theme(name: "BlueEmojis", emojis: ["😨", "😰", "🥶", "🚙" , "🐳" , "🌐" , "🚎", "🐟"], numberOfPairs: 8, color: .blue),
-        Theme(name: "RedEmojis", emojis: ["😡", "🤬", "🐙", "🦐", "🦑", "🚘"], numberOfPairs: 6, color: .red),
-        Theme(name: "GreenEmojis", emojis: ["🐸", "🤢", "🐲", "🦖"], numberOfPairs: 4, color: .green),
-        Theme(name: "PinkEmojis", emojis: ["🧞‍♀️", "🦩"], numberOfPairs: 2, color: .pink),
-        Theme(name: "BrownEmojis", emojis: ["🐴", "🐻", "🐌", "🐶", "🦤", "🐡"], numberOfPairs: 6, color: .brown),
-        Theme(name: "YellowEmojis", emojis: ["👻", "🎃", "🦇", "🧛", "⚰️", "🪄", "🔮", "🧿", "🦄", "🍭", "🧙", "🧌"], numberOfPairs: 12, color: .yellow),
-        Theme(name: "PurpleEmojis", emojis: ["👿", "🙆🏿‍♀️", "👾", "☯️", "☔️", "🌂", "😈", "🍠"], numberOfPairs: 8, color: .purple)
+        Theme(name: "Blue", emojis: ["😨", "😰", "🥶", "🚙" , "🐳" , "🌐" , "🚎", "🐟"], numberOfPairs: 8, color: .blue),
+        Theme(name: "Red", emojis: ["😡", "🤬", "🐙", "🦐", "🦑", "🚘"], numberOfPairs: 6, color: .red),
+        Theme(name: "Green", emojis: ["🐸", "🤢", "🐲", "🦖"], numberOfPairs: 4, color: .green),
+        Theme(name: "Pink", emojis: ["🧞‍♀️", "🦩"], numberOfPairs: 2, color: .pink),
+        Theme(name: "Brown", emojis: ["🐴", "🐻", "🐌", "🐶", "🦤", "🐡"], numberOfPairs: 6, color: .brown),
+        Theme(name: "Yellow", emojis: ["👻", "🎃", "🦇", "🧛", "⚰️", "🪄", "🔮", "🧿", "🦄", "🍭", "🧙", "🧌"], numberOfPairs: 12, color: .yellow),
+        Theme(name: "Purple", emojis: ["👿", "🙆🏿‍♀️", "👾", "☯️", "☔️", "🌂", "😈", "🍠"], numberOfPairs: 8, color: .purple)
     ]
     
     // Any change to the Model (@Published -> View), private only (Model -> ViewModel)
