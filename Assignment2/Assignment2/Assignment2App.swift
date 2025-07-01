@@ -1,8 +1,9 @@
 //  MemorizeApp.swift
-//  Memorize
+
 
 import SwiftUI
 
+// @main -> int main() or fn main()
 @main
 struct Assignment2App: App {
     @StateObject var game = EmojiMemoryGame()

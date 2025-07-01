@@ -1,47 +1,39 @@
 //
 //  EmojiMemoryGameView.swift
-//  Memorize
-//
+//  View
 
 import SwiftUI
 
 struct EmojiMemoryGameView: View {
+    // Any change to the @Published, EmojiMemoryGameView Re-reader body
     @ObservedObject var viewModel: EmojiMemoryGame
     
     var body: some View {
         VStack {
-            cardsThemeText("Jensen")
+            cardsThemeText(viewModel.theme.name)
+            
             ScrollView {
-                cardsTheme
+                cards
                     .animation(.default, value: viewModel.cards )
             }
             Button("Shuffle") {
                 viewModel.shuffle()
             }
             Spacer()
-            Button("New Theme") {
-                viewModel.theme()
+            Button("New Game") {
+                viewModel.newGame()
             }
         }
         .padding()
+        
+        HStack {
+            Text("Score: \(viewModel.score)")
+                 .font(.title2)
+        }
+        .padding(.bottom, 5)
     }
     
-    let colorArray: [Color] = [
-        .red,
-        .green,
-        .blue,
-        .yellow,
-        .orange,
-        .purple
-    ]
-    
-    lazy var randomColor = colorArray.randomElement()!
-    
-    var cardCountTitles: some View {
-        Text("Spring!").font(.largeTitle)
-    }
-    
-    var cardsTheme: some View {
+    var cards: some View {
         LazyVGrid(columns: [GridItem(.adaptive(minimum: 85),spacing: 0)], spacing: 0) {
             ForEach(viewModel.cards) { card in
                 CardView(card)
@@ -52,38 +44,15 @@ struct EmojiMemoryGameView: View {
                     }
             }
         }
-        .foregroundColor(.red)
+        .foregroundColor(viewModel.theme.color)
     }
 
-    func cardsTheme(color: Color) -> some View {
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 85),spacing: 0)], spacing: 0) {
-            ForEach(viewModel.cards) { card in
-                CardView(card)
-                    .aspectRatio(2/3, contentMode: .fit)
-                    .padding(4)
-                    .onTapGesture {
-                        viewModel.choose(card)
-                    }
-            }
-        }
-        .foregroundColor(color)
-    }
-    
     func cardsThemeText(_ text: String) -> some View {
         Text(text).font(.largeTitle)
     }
-    
-    func chooseTheme() -> cardsThemes {
-        cardsThemes.allCases.randomElement()!
-    }
-    
-    enum cardsThemes: CaseIterable {
-        case cardsThemeBlue, cardsThemeGreen, cardsThemeYellow, cardsThemeRed, cardsThemePink, cardsThemeBrown
-    }
-    
-    
 }
 
+// Single card Display
 struct CardView: View {
     let card: MemoryGame<String>.Card
     
