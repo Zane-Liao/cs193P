@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// @main -> int main() or fn main()
 @main
 struct Assignment3App: App {
     @StateObject var game = EmojiMemoryGame()

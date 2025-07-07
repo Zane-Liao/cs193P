@@ -8,18 +8,30 @@
 import SwiftUI
 
 struct EmojiMemoryGameView: View {
+    // Any change to the @Published, EmojiMemoryGameView Re-reader body
     @ObservedObject var viewModel: EmojiMemoryGame
     private let aspectRatio: CGFloat = 2/3
     
     var body: some View {
         VStack {
+            cardsThemeText(viewModel.theme.name)
+            
             cards
                 .animation(.default, value: viewModel.cards)
             Button("shuffle") {
                 viewModel.shuffle()
             }
+            Button("New Game") {
+                            viewModel.newGame()
+            }
         }
         .padding()
+
+        HStack {
+            Text("Score: \(viewModel.score)")
+                 .font(.title2)
+        }
+        .padding(.bottom, 5)
     }
     
     private var cards: some View {
@@ -30,10 +42,15 @@ struct EmojiMemoryGameView: View {
                     viewModel.choose(card)
                 }
         }
-        .foregroundColor(Color.orange)
+        .foregroundColor(viewModel.theme.color)
+    }
+    
+    func cardsThemeText(_ text: String) -> some View {
+        Text(text).font(.largeTitle)
     }
 }
 
+// Single card Display
 struct CardView: View {
     let card: MemoryGame<String>.Card
     

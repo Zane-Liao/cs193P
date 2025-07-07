@@ -8,8 +8,12 @@
 import Foundation
 
 struct MemoryGame<CardContent> where CardContent: Equatable {
+    // Store all card array
     private(set) var cards: Array<Card>
     
+    private(set) var score = 0
+    
+    // Create card pair, cardContentFactoty with Closures
     init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
         cards = Array<Card>()
         // Initial
@@ -20,7 +24,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         }
     }
     
-    // Index
+    // Tracks face-up card index
     var indexOfTheOneAndOnlyFaceUpCard: Int? {
         get { cards.indices.filter { index  in cards[index].isFaceUp }.only }
         set { cards.indices.forEach { cards[$0].isFaceUp = (newValue == $0) } }
@@ -34,6 +38,9 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
                     if cards[chosenIndex].content == cards[potentialMatchIndex].content {
                         cards[chosenIndex].isMatched = true
                         cards[potentialMatchIndex].isMatched = true
+                        score += 2
+                    } else {
+                        score -= 1
                     }
                 } else {
                     indexOfTheOneAndOnlyFaceUpCard = chosenIndex
@@ -43,11 +50,12 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
         }
     }
     
+    // Shuffle the cards(random)
     mutating func shuffle() {
         cards.shuffle()
     }
     
-    // Card Struct
+    // Define card properties
     struct Card: Equatable, Identifiable, CustomDebugStringConvertible {
         var isFaceUp = false
         var isMatched = false
@@ -61,6 +69,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable {
     
 }
 
+// indexOfTheOneAndOnlyFaceUpCard...
 extension Array {
     var only: Element? {
         count == 1 ? first : nil
