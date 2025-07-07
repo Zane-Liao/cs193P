@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		FF6DABE32E1B7EB40029E390 /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6DABE22E1B7EB40029E390 /* AspectVGrid.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		FF6DABBF2E1B798E0029E390 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -31,7 +27,6 @@
 		FF6DABB12E1B798C0029E390 /* Assignment3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF6DABBE2E1B798E0029E390 /* Assignment3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assignment3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF6DABC82E1B798E0029E390 /* Assignment3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assignment3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF6DABE22E1B7EB40029E390 /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -80,7 +75,6 @@
 		FF6DABA82E1B798C0029E390 = {
 			isa = PBXGroup;
 			children = (
-				FF6DABE22E1B7EB40029E390 /* AspectVGrid.swift */,
 				FF6DABB32E1B798C0029E390 /* Assignment3 */,
 				FF6DABC12E1B798E0029E390 /* Assignment3Tests */,
 				FF6DABCB2E1B798E0029E390 /* Assignment3UITests */,
@@ -242,7 +236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF6DABE32E1B7EB40029E390 /* AspectVGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
