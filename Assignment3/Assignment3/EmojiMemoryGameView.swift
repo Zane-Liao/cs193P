@@ -22,7 +22,7 @@ struct EmojiMemoryGameView: View {
                 viewModel.shuffle()
             }
             Button("New Game") {
-                            viewModel.newGame()
+                viewModel.newGame()
             }
         }
         .padding()
@@ -77,6 +77,7 @@ struct CardView: View {
     }
 }
 
+//
 #Preview {
     EmojiMemoryGameView(viewModel: EmojiMemoryGame())
 }

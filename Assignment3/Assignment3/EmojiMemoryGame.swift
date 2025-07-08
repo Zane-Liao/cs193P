@@ -10,8 +10,14 @@ internal import Combine
 
 class EmojiMemoryGame: ObservableObject {
     typealias Card = MemoryGame<String>.Card
-        
+    
+    // Our Themes
     private static let themes: [Theme] = [
+        Theme(name: "Orange(Default)", emojis: [
+            "👻", "🎃", "🦇", "🧛", "⚰️", "🪄",
+            "🔮", "🧿", "🦄", "🍭", "🧙", "🧌"
+        ], numberOfPairs: 12, color: .orange),
+
         Theme(name: "Blue", emojis: [
             "😨", "😰", "🥶", "🚙", "🐳", "🌐", "🚎", "🐟",
             "🧊", "🌊", "💎"
@@ -38,14 +44,19 @@ class EmojiMemoryGame: ObservableObject {
         ], numberOfPairs: 10, color: .brown),
 
         Theme(name: "Yellow", emojis: [
-            "👻", "🎃", "🦇", "🧛", "⚰️", "🪄", "🔮", "🧿", "🦄", "🍭", "🧙", "🧌",
+            "👻", "🎃", "🦇", "🧛", "⚰️", "🪄",
+            "🔮", "🧿", "🦄", "🍭", "🧙", "🧌",
             "🌕", "💛", "🐥", "⭐️"
         ], numberOfPairs: 16, color: .yellow),
 
         Theme(name: "Purple", emojis: [
             "👿", "🙆🏿‍♀️", "👾", "☯️", "☔️", "🌂", "😈", "🍠",
             "🔮", "🍇", "💜", "🪻"
-        ], numberOfPairs: 12, color: .purple)
+        ], numberOfPairs: 12, color: .purple),
+        
+        Theme(name: "Set(green)", emojis: [
+            "", "", ""
+        ], numberOfPairs: 3, color: .green)
     ]
 
         
