@@ -3,7 +3,7 @@
 //  Assignment3
 //
 //  Created by Zane Liao on 2025/7/7.
-//  ViewModel
+//
 
 import SwiftUI
 
@@ -29,6 +29,7 @@ struct AspectVGrid<Item: Identifiable, ItemView: View>: View {
                 ForEach(items) { item in
                     content(item)
                         .aspectRatio(aspectRatio, contentMode: .fit)
+                        .padding(5)
                 }
             }
         }
@@ -51,6 +52,7 @@ struct AspectVGrid<Item: Identifiable, ItemView: View>: View {
             }
             columnCount += 1
         } while columnCount < count
+        
         return min(size.width / count, size.height * aspectRatio).rounded(.down)
     }
 }
