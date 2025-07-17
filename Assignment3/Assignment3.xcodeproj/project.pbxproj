@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FF23CAA42E2880D700F85F27 /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23CA9E2E2880D700F85F27 /* AspectVGrid.swift */; };
+		FF56A50C2E1E1DCA00ABF405 /* SetGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56A50B2E1E1DCA00ABF405 /* SetGame.swift */; };
+		FF56A50F2E1E1F0800ABF405 /* SetGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56A50E2E1E1F0800ABF405 /* SetGameView.swift */; };
+		FF56A5112E1E202E00ABF405 /* Assignment3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56A5102E1E202E00ABF405 /* Assignment3App.swift */; };
+		FFEA0D192E1D365D008015E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFEA0D102E1D365D008015E2 /* Assets.xcassets */; };
+		FFEA0D1C2E1D365D008015E2 /* SetMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEA0D122E1D365D008015E2 /* SetMemoryGame.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		FF6DABBF2E1B798E0029E390 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,17 +33,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF23CA9E2E2880D700F85F27 /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
+		FF56A50B2E1E1DCA00ABF405 /* SetGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGame.swift; sourceTree = "<group>"; };
+		FF56A50E2E1E1F0800ABF405 /* SetGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameView.swift; sourceTree = "<group>"; };
+		FF56A5102E1E202E00ABF405 /* Assignment3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment3App.swift; sourceTree = "<group>"; };
 		FF6DABB12E1B798C0029E390 /* Assignment3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF6DABBE2E1B798E0029E390 /* Assignment3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assignment3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF6DABC82E1B798E0029E390 /* Assignment3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assignment3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFEA0D102E1D365D008015E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFEA0D122E1D365D008015E2 /* SetMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetMemoryGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		FF6DABB32E1B798C0029E390 /* Assignment3 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Assignment3;
-			sourceTree = "<group>";
-		};
 		FF6DABC12E1B798E0029E390 /* Assignment3Tests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Assignment3Tests;
@@ -75,7 +85,7 @@
 		FF6DABA82E1B798C0029E390 = {
 			isa = PBXGroup;
 			children = (
-				FF6DABB32E1B798C0029E390 /* Assignment3 */,
+				FFEA0D182E1D365D008015E2 /* Assignment3 */,
 				FF6DABC12E1B798E0029E390 /* Assignment3Tests */,
 				FF6DABCB2E1B798E0029E390 /* Assignment3UITests */,
 				FF6DABB22E1B798C0029E390 /* Products */,
@@ -92,6 +102,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		FFEA0D182E1D365D008015E2 /* Assignment3 */ = {
+			isa = PBXGroup;
+			children = (
+				FFEA0D102E1D365D008015E2 /* Assets.xcassets */,
+				FF23CA9E2E2880D700F85F27 /* AspectVGrid.swift */,
+				FFEA0D122E1D365D008015E2 /* SetMemoryGame.swift */,
+				FF56A50B2E1E1DCA00ABF405 /* SetGame.swift */,
+				FF56A50E2E1E1F0800ABF405 /* SetGameView.swift */,
+				FF56A5102E1E202E00ABF405 /* Assignment3App.swift */,
+			);
+			path = Assignment3;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +129,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				FF6DABB32E1B798C0029E390 /* Assignment3 */,
 			);
 			name = Assignment3;
 			packageProductDependencies = (
@@ -212,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFEA0D192E1D365D008015E2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF56A50C2E1E1DCA00ABF405 /* SetGame.swift in Sources */,
+				FFEA0D1C2E1D365D008015E2 /* SetMemoryGame.swift in Sources */,
+				FF23CAA42E2880D700F85F27 /* AspectVGrid.swift in Sources */,
+				FF56A50F2E1E1F0800ABF405 /* SetGameView.swift in Sources */,
+				FF56A5112E1E202E00ABF405 /* Assignment3App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
